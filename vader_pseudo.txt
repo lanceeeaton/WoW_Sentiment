@@ -1,0 +1,13 @@
+Don't stem or lemmatize with Vader as
+has different ratings depending on the form of the word
+
+for chunk in csv(file, chunk = 10000)
+	average_sent = [] # this will hold sentiment for each observation
+	for each observation in chunk:
+		comment_sent = []
+		for each comment in observation.comments:
+			sent = comment.sentiment
+	       	comment_sent.append(sent)
+	    	average_sent.append(average(comment_sent))
+	
+	df['Average sent'] = Series(average_sent)
