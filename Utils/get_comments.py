@@ -17,10 +17,9 @@ columns = ['Comment List','Comment Number','Creation Date','Title']
 write_csv = 'Data\\wow_comments.csv'
 read_csv = 'Data\\urls.csv'
 
-with open(write_csv, 'a') as csvFile: # adding header for easier use later
+with open(write_csv, 'a', newline='') as csvFile: # adding header for easier use later
     writer = csv.writer(csvFile)
     writer.writerow(columns)
-csvFile.close()
 
 
 values = pd.read_csv(read_csv).values

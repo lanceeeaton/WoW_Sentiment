@@ -14,10 +14,9 @@ def get_pushshift_urls():
     columns = ['Created Date','Full Url']
     write_file = 'Data\\urls.csv'
     
-    with open(write_file, 'a') as csvFile: # adding header to file
+    with open(write_file, 'a', newline='') as csvFile: # adding header to file
       writer = csv.writer(csvFile)
       writer.writerow(columns)
-    csvFile.close()
     
     while True:
       url = 'https://api.pushshift.io/reddit/search/submission/?subreddit=wow&sort=asc&sort_type=created_utc&after='+str(after_date)+'&before='+str(before_date)+'&size=1000'
