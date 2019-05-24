@@ -1,5 +1,4 @@
 __pycache__/
 Data/
 Utils/api_info.py
-geckodriver.log
-debug.log
+*.log
